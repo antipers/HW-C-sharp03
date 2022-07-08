@@ -1,4 +1,5 @@
-﻿System.Console.WriteLine("Введите пятизначное число- ");
+﻿//попытка через вывод в массив неудачно
+/* System.Console.WriteLine("Введите пятизначное число- ");
 int Num;
 while (!int.TryParse(Console.ReadLine(), out Num))
 {
@@ -12,15 +13,20 @@ while (Num > 99999 | Num < 10000)
     System.Console.WriteLine("Введено некорректное число, введите пятизначное");
     int.TryParse(Console.ReadLine(), out Num);
 }
-
-int[] array = new int[5];
-for (int i = 1; i  <5; i++)
+int[] array = new int[4];
+for (int i = 4; i > 0; i--)
 {
-    int divNumb = 10000;
-    for (; divNumb > 0; divNumb /= 10)
-    {
-        array[i] = Num / divNumb;
-    }
-
-    System.Console.Write($"{array[i]}" + "  ");
+    array[i] = number % 10;
+    number /= 10;
+    System.Console.WriteLine(array[i]);
 }
+ */
+
+
+Console.WriteLine("Введите пятизначное число:");
+string number = Console.ReadLine();
+
+if (number[0] == number[4] && number[1] == number[3])
+{ System.Console.WriteLine($"Число {number} является палиндромом, используйте его с умом"); }
+else
+{ System.Console.WriteLine($"К сожалению или к счастью число {number} не является палиндромом"); }
