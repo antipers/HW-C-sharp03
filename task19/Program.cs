@@ -14,10 +14,10 @@ while (Num > 99999 | Num < 10000)
     int.TryParse(Console.ReadLine(), out Num);
 }
 int[] array = new int[4];
-for (int i = 4; i > 0; i--)
+for (int i = 4; i >= 0; i--)
 {
-    array[i] = number % 10;
-    number /= 10;
+    array[i] = Num % 10;
+    Num /= 10;
     System.Console.WriteLine(array[i]);
 }
  */
