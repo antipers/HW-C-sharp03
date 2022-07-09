@@ -13,12 +13,15 @@ while (Num > 99999 | Num < 10000)
     System.Console.WriteLine("Введено некорректное число, введите пятизначное");
     int.TryParse(Console.ReadLine(), out Num);
 }
-int[] array = new int[4];
-for (int i = 4; i >= 0; i--)
+int[] array = new int[5];
+for (int i = 0; i < array.Length; i++)
+
 {
-    array[i] = Num % 10;
-    Num /= 10;
-    System.Console.WriteLine(array[i]);
+    int div =10000;
+    array[i] = Num /div;
+    Num= Num-array[i]*div;
+    div /=10;
+    System.Console.Write($"{array[i]} , ");
 }
  */
 
